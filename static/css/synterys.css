@@ -151,6 +151,9 @@ ul.nav a:hover {
 .headimg {
   position: relative;
   left: 50%;
+  
+  width: 1170px;
+  margin-left: -585px;
 }
 
 .headimg-container img {
