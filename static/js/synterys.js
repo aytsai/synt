@@ -42,22 +42,22 @@ function initMap() {
                                    icon: '../static/img/marker.png'});
 }
 
-$(window).scroll(function() {
-  if ($(this).scrollTop() >= 50)
-    $('#top').fadeIn("fast");
-  else
-    $('#top').fadeOut("fast");
-});
-
-$('#top').click(function() {
-    $('body,html').animate({
-        scrollTop : 0
-    }, "slow");
-});
-
 $(document).ready(function(){
   adjust_navbar ();
   adjust_mmargin ();
+  
+  $(window).scroll(function() {
+    if ($(this).scrollTop() >= 50)
+      $('#top').fadeIn("fast");
+    else
+      $('#top').fadeOut("fast");
+  });
+
+  $('#top').click(function() {
+      $('body,html').animate({
+          scrollTop : 0
+      }, "slow");
+  });
   
   if (document.getElementById("camap")) {
     google.maps.event.addDomListener(window, 'load', initMap);
