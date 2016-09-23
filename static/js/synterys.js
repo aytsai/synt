@@ -18,16 +18,6 @@ function adjust_mmargin () {
   }
 }
 
-$( window ).resize(function() {
-  adjust_navbar ();
-  adjust_mmargin ();
-});
-
-$(window).on("orientationchange",function(){
-  adjust_navbar ();
-  adjust_mmargin ();
-});
-
 function initMap() {
   var myOptions = {zoom: 14, center: new google.maps.LatLng(37.6082651,-122.0829269), mapTypeId: google.maps.MapTypeId.ROADMAP};
   map = new google.maps.Map(document.getElementById("camap"), myOptions);
@@ -45,6 +35,16 @@ function initMap() {
 $(document).ready(function(){
   adjust_navbar ();
   adjust_mmargin ();
+  
+  $( window ).resize(function() {
+    adjust_navbar ();
+    adjust_mmargin ();
+  });
+
+  $(window).on("orientationchange",function(){
+    adjust_navbar ();
+    adjust_mmargin ();
+  });
   
   $(window).scroll(function() {
     if ($(this).scrollTop() >= 50)
