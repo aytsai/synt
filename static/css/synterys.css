@@ -181,7 +181,7 @@ ul.nav a:hover {
   }
 }
 
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
   .info-section, .footer-section {
     width: 1170px;
   }
